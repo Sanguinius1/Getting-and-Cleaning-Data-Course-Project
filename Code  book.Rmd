@@ -1,10 +1,4 @@
-
----
-title: "Course Project Codebook"
-author: "DoHo"
-date: "21 Mai 2018"
-output: html_document
----
+# Course Project Codebook
 
 This is the codebook accompanying and explaining the variables of the Tidydata.txt. This data was generated using the script run_analysis.R. 
 
