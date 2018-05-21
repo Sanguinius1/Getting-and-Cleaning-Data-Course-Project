@@ -1,4 +1,4 @@
-##Load libraries
+##Load library
 library(dplyr)
 
 #1. Download and unzip the Dataset:
