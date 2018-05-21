@@ -1,12 +1,4 @@
-
----
-title: "Course Project Codebook"
-author: "DoHo"
-date: "21 Mai 2018"
-output:
-  word_document: default
-  html_document: default
----
+# Codebook
 
 This is the codebook accompanying and explaining the variables of the Tidydata.txt. This data was generated using the script run_analysis.R. 
 
@@ -30,7 +22,7 @@ Steps that led  to the creation of Tidydata.txt:
     4. Appropriately labeled the data set with descriptive variable names.
     5. From the data set in step 4, a second, independent tidy data set (Tidydata.txt) was created with the average of each variable for each activity and each subject.
     
-VARIABLES: 
+# VARIABLES: 
 
 1. Subjects
 integer; People taking part in the tests. Range from 1 to 30.
@@ -47,7 +39,7 @@ STANDING
 LAYING
 ```
  
-MEASUREMENTS and UNITS:
+# MEASUREMENTS and UNITS:
 
 Measurements captured are body acceleration and angular velocity Note: Features are normalized and bounded within [-1,1].
 
@@ -75,7 +67,7 @@ timeDomain values are results of the accelerometer and gyroscope 3-axial raw sig
 
 frequencyDomain signals are the results of a Fast Fourier Transform (FFT) being applied to some of the signals.
 
-timeDomain Values:
+# timeDomain Values:
 
 
 Mean timeDomain body acceleration values for directions X, Y  and Z:
@@ -165,7 +157,7 @@ Body angular velocity Jerk Magnitude signals for Mean and  Standard Deviation:
   
 
 
-frequencyDomain Values:
+# frequencyDomain Values:
    
 Mean frequencyDomain body acceleration values for directions X, Y  and Z:
 
