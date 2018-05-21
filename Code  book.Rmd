@@ -1,7 +1,7 @@
-
+# Codebook
 This is the codebook accompanying and explaining the variables of the Tidydata.txt. This data was generated using the script run_analysis.R. 
 
-# Note: for better understanding the  variable names have been altered to be more readable. First, special characters  such as () and - have been removed.  Abbreviations are fully spelled  out, e.g: "Acc" -> "Accelerometer", "t" -> "time", etc. A typo "BodyBody" has been fixed to "Body".
+Note: for better understanding the  variable names have been altered to be more readable. First, special characters  such as () and - have been removed.  Abbreviations are fully spelled  out, e.g: "Acc" -> "Accelerometer", "t" -> "time", etc. A typo "BodyBody" has been fixed to "Body".
 
 The source of the data set is: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
