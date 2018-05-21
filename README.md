@@ -18,4 +18,4 @@ The R script called run_analysis.R  does the following.
     
 This repo contains the run_analysis.R script and the resulting tidy data as in Tidydata.txt. For detailed information on the data take a look at the Codebook.md!
 
-# System Note: This experiment was conducted on a Windows 10 Home x64-based Notebook. RStudio Version 1.1.442, dplyr package version 0.7.4
+## System Note: This experiment was conducted on a Windows 10 Home x64-based Notebook. RStudio Version 1.1.442, dplyr package version 0.7.4
