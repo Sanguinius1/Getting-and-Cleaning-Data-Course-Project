@@ -72,9 +72,9 @@ timeDomain Values:
 
 Mean timeDomain body acceleration values for directions X, Y  and Z:
 
-  .) timeDomainBodyAccelerometerMeanX
-  .) timeDomainBodyAccelerometerMeanY
-  .) timeDomainBodyAccelerometerMeanZ
+timeDomainBodyAccelerometerMeanX
+timeDomainBodyAccelerometerMeanY
+timeDomainBodyAccelerometerMeanZ
     
 Standard Deviation timeDomain body acceleration values for directions X, Y and Z:
 
@@ -90,7 +90,7 @@ Mean timeDomain gravity acceleratiion values for directions X, Y and Z:
    
 Standard Deviation gravity acceleration for  directions X, Y and Z:
 
-  timeDomainGravityAccelerometerStandardDeviationX
+  timeDomainGravityAccelerometerStandardDeviationX\n
   timeDomainGravityAccelerometerStandardDeviationY
   timeDomainGravityAccelerometerStandardDeviationZ
   
