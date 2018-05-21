@@ -1,0 +1,276 @@
+
+---
+title: "Course Project Codebook"
+author: "DoHo"
+date: "21 Mai 2018"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+This is the codebook accompanying and explaining the variables of the Tidydata.txt. This data was generated using the script run_analysis.R. 
+
+Note: for better understanding the  variable names have been altered to be more readable. First, special characters  such as () and - have been removed.  Abbreviations are fully spelled  out, e.g: "Acc" -> "Accelerometer", "t" -> "time", etc. A typo "BodyBody" has been fixed to "Body".
+
+The source of the data set is: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+
+Information on the data set itself, quoted from source "http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones":
+"Data Set Information:
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain."
+
+
+Steps that led  to the creation of Tidydata.txt:
+
+    1. The training and the test sets were merged to create one data set.
+    2. Only the measurements on the mean and standard deviation for each measurement were extracted.
+    3. Descriptive activity names to name the activities in the data set are used.
+    4. Appropriately labeled the data set with descriptive variable names.
+    5. From the data set in step 4, a second, independent tidy data set (Tidydata.txt) was created with the average of each variable for each activity and each subject.
+    
+VARIABLES: 
+
+1. Subjects
+integer; People taking part in the tests. Range from 1 to 30.
+
+
+2. Activities
+character; Identifier denouncing what tasks the subjects performed during the tests:
+```{r}
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+```
+ 
+MEASUREMENTS and UNITS:
+
+Measurements captured are body acceleration and angular velocity Note: Features are normalized and bounded within [-1,1].
+
+Units before normalization: standard gravity units (9.81 m/s²) for measurement of body 
+```{r}
+Acceleration
+```
+values
+and
+radians/second (rd.s^-1) for measurement of angular velocity captured in
+```{r}
+Gyroscope
+```
+values.
+
+Also, the
+```{r}
+magnitude
+```
+of these three-dimensional signals were calculated using the Euclidean norm.
+
+The data set is parted in two domains, all signals are floating point numbers:
+
+timeDomain values are results of the accelerometer and gyroscope 3-axial raw signals.
+
+frequencyDomain signals are the results of a Fast Fourier Transform (FFT) being applied to some of the signals.
+
+timeDomain Values:
+
+Mean timeDomain body acceleration values for directions X, Y  and Z:
+
+  timeDomainBodyAccelerometerMeanX
+  
+  timeDomainBodyAccelerometerMeanY
+  
+  timeDomainBodyAccelerometerMeanZ
+    
+Standard Deviation timeDomain body acceleration values for directions X, Y and Z:
+
+   timeDomainBodyAccelerometerStandardDeviationX
+   
+   timeDomainBodyAccelerometerStandardDeviationY
+   
+   timeDomainBodyAccelerometerStandardDeviationZ
+   
+Mean timeDomain gravity acceleratiion values for directions X, Y and Z:
+
+   timeDomainGravityAccelerometerMeanX
+   
+   timeDomainGravityAccelerometerMeanY
+   
+   timeDomainGravityAccelerometerMeanZ
+   
+Standard Deviation gravity acceleration for  directions X, Y and Z:
+
+  timeDomainGravityAccelerometerStandardDeviationX
+  
+  timeDomainGravityAccelerometerStandardDeviationY
+  
+  timeDomainGravityAccelerometerStandardDeviationZ
+  
+Mean timeDomain acceleration Jerk signals for directions X, Y and Z: 
+
+  timeDomainBodyAccelerometerJerkMeanX
+  
+  timeDomainBodyAccelerometerJerkMeanY
+  
+  timeDomainBodyAccelerometerJerkMeanZ
+  
+Standard Deviation timeDomain acceleration Jerk signals for directions X,  Y and Z:
+
+  timeDomainBodyAccelerometerJerkStandardDeviationX
+  
+  timeDomainBodyAccelerometerJerkStandardDeviationY
+  
+  timeDomainBodyAccelerometerJerkStandardDeviationZ
+  
+Mean timeDomain body angular velocity signals for  directions X, Y and Z:
+
+  timeDomainBodyGyroscopeMeanX
+  
+  timeDomainBodyGyroscopeMeanY
+  
+  timeDomainBodyGyroscopeMeanZ
+  
+Standard Deviation timeDomain body angular velocity signals for  directions X, Y and Z:
+
+  timeDomainBodyGyroscopeStandardDeviationX
+  
+  timeDomainBodyGyroscopeStandardDeviationY
+  
+  timeDomainBodyGyroscopeStandardDeviationZ
+  
+Mean timeDomain body angular velocity Jerk signals for directions X, Y and Z: 
+  
+  timeDomainBodyGyroscopeJerkMeanX
+  
+  timeDomainBodyGyroscopeJerkMeanY
+  
+  timeDomainBodyGyroscopeJerkMeanZ
+  
+Standard Deviation timeDomain body angular velocity Jerk signals for directions X, Y and Z: 
+
+  timeDomainBodyGyroscopeJerkStandardDeviationX
+  
+  timeDomainBodyGyroscopeJerkStandardDeviationY
+  
+  timeDomainBodyGyroscopeJerkStandardDeviationZ
+  
+Body acceleration Magnitude signals for Mean and Standard Deviation:
+
+  timeDomainBodyAccelerometerMagnitudeMean
+  
+  timeDomainBodyAccelerometerMagnitudeStandardDeviation
+  
+Body angular velocity Magnitude signals for Mean and Standrd Deviation:
+
+  timeDomainGravityAccelerometerMagnitudeMean
+  
+  timeDomainGravityAccelerometerMagnitudeStandardDeviation
+  
+Body acceleration Jerk Magnitude signals for Mean and Standard Deviation:
+
+  timeDomainBodyAccelerometerJerkMagnitudeMean
+  
+  timeDomainBodyAccelerometerJerkMagnitudeStandardDeviation
+  
+Body angular velocity Magnitude signals for Mean and Standard Deviation:
+  
+  timeDomainBodyGyroscopeMagnitudeMean
+  
+  timeDomainBodyGyroscopeMagnitudeStandardDeviation
+  
+Body angular velocity Jerk Magnitude signals for Mean and  Standard Deviation:
+  
+  timeDomainBodyGyroscopeJerkMagnitudeMean
+  
+  timeDomainBodyGyroscopeJerkMagnitudeStandardDeviation
+  
+
+
+frequencyDomain Values:
+   
+Mean frequencyDomain body acceleration values for directions X, Y  and Z:
+
+  frequencyDomainBodyAccelerometerMeanX
+  
+  frequencyDomainBodyAccelerometerMeanY
+  
+  frequencyDomainBodyAccelerometerMeanZ
+             
+Standard Deviation frequencyDomain body acceleration values for directions X, Y and Z:
+             
+  frequencyDomainBodyAccelerometerStandardDeviationX
+  
+  frequencyDomainBodyAccelerometerStandardDeviationY
+  
+  frequencyDomainBodyAccelerometerStandardDeviationZ
+             
+Mean frequencyDomain acceleration Jerk signals for directions X, Y and Z: 
+             
+  frequencyDomainBodyAccelerometerJerkMeanX
+  
+  frequencyDomainBodyAccelerometerJerkMeanY
+  
+  frequencyDomainBodyAccelerometerJerkMeanZ
+             
+Standard Deviation frequencyDomain acceleration Jerk signals for directions X,  Y and Z:
+             
+  frequencyDomainBodyAccelerometerJerkStandardDeviationX
+  
+  frequencyDomainBodyAccelerometerJerkStandardDeviationY
+  
+  frequencyDomainBodyAccelerometerJerkStandardDeviationZ
+             
+Mean frequencyDomain body angular velocity signals for  directions X, Y and Z:
+             
+  frequencyDomainBodyGyroscopeMeanX
+  
+  frequencyDomainBodyGyroscopeMeanY
+  
+  frequencyDomainBodyGyroscopeMeanZ
+             
+Standard Deviation frequencyDomain body angular velocity signals for  directions X, Y and Z:
+             
+  frequencyDomainBodyGyroscopeStandardDeviationX
+  
+  frequencyDomainBodyGyroscopeStandardDeviationY
+  
+  frequencyDomainBodyGyroscopeStandardDeviationZ
+             
+Body acceleration Magnitude signals for Mean and Standard Deviation:
+             
+  frequencyDomainBodyAccelerometerMagnitudeMean
+  
+  frequencyDomainBodyAccelerometerMagnitudeStandardDeviation
+             
+Body angular velocity Magnitude signals for Mean and Standrd Deviation:
+             
+  frequencyDomainGravityAccelerometerMagnitudeMean
+  
+  frequencyDomainGravityAccelerometerMagnitudeStandardDeviation
+             
+Body acceleration Jerk Magnitude signals for Mean and Standard Deviation:
+             
+  frequencyDomainBodyAccelerometerJerkMagnitudeMean
+  
+  frequencyDomainBodyAccelerometerJerkMagnitudeStandardDeviation
+             
+Body angular velocity Magnitude signals for Mean and Standard Deviation:
+             
+  frequencyDomainBodyGyroscopeMagnitudeMean
+  
+  frequencyDomainBodyGyroscopeMagnitudeStandardDeviation
+             
+Body angular velocity Jerk Magnitude signals for Mean and  Standard Deviation:
+             
+  frequencyDomainBodyGyroscopeJerkMagnitudeMean
+  
+  frequencyDomainBodyGyroscopeJerkMagnitudeStandardDeviation
+
+
+
+
+
